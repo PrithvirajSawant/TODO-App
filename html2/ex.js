@@ -57,26 +57,28 @@ const green = document.querySelector(".green");
 
 const divs = document.querySelectorAll('div');
 
-// divs.forEach(div => {
-//     div.addEventListener("click", () => {
-//         console.log("hi")
-//     })
-// })
+divs.forEach(addClickListener)
+
+function addClickListener(e){
+    e.addEventListener("click", () => {
+        console.log("hi")
+    })
+}
 
 // deligation
 // document.addEventListener("click", e => {
 //     if(e.target.matches("div")) console.log("hi")
 // } )
 
-globalEventListener("click", "div", e =>{
-    console.log("Hi");
-})
+// globalEventListener("click", "div", e =>{
+//     console.log("Hi");
+// })
 
-function globalEventListener(type, selector, callback){
-    document.addEventListener(type, e =>{
-        if(e.target.matches(selector)) callback(e);
-    })
-}
+// function globalEventListener(type, selector, callback){
+//     document.addEventListener(type, e =>{
+//         if(e.target.matches(selector)) callback(e);
+//     })
+// }
 
 const newDiv = document.createElement("div")
 newDiv.style.width="400px";
